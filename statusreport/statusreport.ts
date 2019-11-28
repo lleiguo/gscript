@@ -46,7 +46,7 @@ function updateStatus(index: number, jiraStatus: string) {
 function getIssueStatus(key) {
   let baseURL = "https://hootsuite.atlassian.net/rest/api/3/issue/";
   let username = "lei.guo@hootsuite.com";
-  let password = "RDSsG75xo9p1EP8nKO3vEF2E";
+  let password = "xxxxxxxxxxxxxxxxxxxxxx";
   let encCred = Utilities.base64Encode(username + ":" + password);
 
   let fetchArgs = {
