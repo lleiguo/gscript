@@ -3,7 +3,6 @@ let sourceSheet = activeSheet.getSheetByName("Team Sprints");
 let baseURL = "https://hootsuite.atlassian.net/rest/greenhopper/latest/rapid/charts/sprintreport?rapidViewId=";
 let sprintURL = "https://hootsuite.atlassian.net/rest/agile/1.0/board/"
 let username = "lei.guo@hootsuite.com";
-let password = "5vXCLN8IAEeVRupF5WuvC851";
 let encCred = Utilities.base64Encode(username + ":" + password);
 
 enum teamBoardIds {
