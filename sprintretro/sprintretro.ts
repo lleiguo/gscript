@@ -1,39 +1,63 @@
-let activeSheet = SpreadsheetApp.getActiveSpreadsheet();
-let sourceSheet = activeSheet.getSheetByName("Team Sprints");
+let sourceSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sprint Predicability");
 let baseURL = "https://hootsuite.atlassian.net/rest/greenhopper/latest/rapid/charts/sprintreport?rapidViewId=";
 let sprintURL = "https://hootsuite.atlassian.net/rest/agile/1.0/board/"
+let issueURL = "https://hootsuite.atlassian.net/rest/agile/1.0/sprint/"
+let searchURL = "https://hootsuite.atlassian.net/rest/api/3/search?jql=filter=21017&type=epic&fields=key"
 let username = "lei.guo@hootsuite.com";
 let encCred = Utilities.base64Encode(username + ":" + password);
+let roadmap: Array[string] ;
 
 enum teamBoardIds {
   "PCRE" = 711,
   "PODM" = 813,
   "PBTD" = 702,
-  "POBS" = 823
+  "POBS" = 820
 }
 
 let fetchArgs = {
   contentType: "application/json",
   headers: { Authorization: "Basic " + encCred },
-  muteHttpExceptions: true
+  muteHttpExceptions: false
 };
 
 function onOpen() {
-  let menuEntries = [{ name: "Update Team Sprints", functionName: "update" }];
-  activeSheet.addMenu("Commands", menuEntries);
+    let menu = SpreadsheetApp.getUi().createMenu("Commands");
+    menu.addItem("Update Sprint Predicability Sheet", 'update');
+    menu.addToUi()
 }
 
 function update() {
   if (sourceSheet == null) {
     SpreadsheetApp.getUi().alert("No source sheet present!");
-    return;
-  }
+        return;
+      }
 
-  activeSheet.deleteRows(2, activeSheet.getLastRow())
-  for (let boardId in teamBoardIds) {
-    updateSprints(boardId);
+    sourceSheet.deleteRows(2, sourceSheet.getLastRow())
+
+    getRoadmap()
+
+    for (let boardId in teamBoardIds) {
+      if (!isNaN(boardId)) {
+        updateSprints(boardId);
+      }
   }
 }
+
+function getRoadmap() {
+  let httpResponse = UrlFetchApp.fetch(searchURL, fetchArgs);
+  if (httpResponse) {
+    let rspns = httpResponse.getResponseCode();
+    if (rspns === 200) {
+      let data = JSON.parse(httpResponse.getContentText());
+      roadmap = data.issues
+    } else {
+      SpreadsheetApp.getUi().alert(
+          "Jira Error: " + rspns
+      );
+    }
+  }
+}
+
 function updateSprints(boardId: string) {
   let isLast = false
   let lastIndex = 0
@@ -51,18 +75,17 @@ function updateSprints(boardId: string) {
           let startDate = sprints[i].startDate
           
           if(Date.parse(startDate) > Date.parse("2019-01-01")) {
-            updateSprint(activeSheet.getLastRow()+1, sprintId, boardId)
+            updateSprint(sourceSheet.getLastRow()+1, sprintId, boardId)
           }
         }
       } else {
         SpreadsheetApp.getUi().alert(
-          "Jira Error: Unable to make requests to Jira!" + rspns
+          "Jira Error: " + rspns
         );
       }
     }
   }
 }
-
 
 function updateSprint(row: number, sprintId: string, boardId: string) {
   let httpResponse = UrlFetchApp.fetch(baseURL+boardId+"&sprintId=" + sprintId, fetchArgs);
@@ -83,9 +106,34 @@ function updateSprint(row: number, sprintId: string, boardId: string) {
       sourceSheet.getRange(row, 11, 1, 1).setValue(data.sprint.endDate);
     } else {
       SpreadsheetApp.getUi().alert(
-        "Jira Error: Unable to make requests to Jira!" + rspns
+        "Jira Error: Unable to make requests to " + baseURL + ": " + rspns
       );
     }
   }
+
+  //Update Issue counts
+  httpResponse = UrlFetchApp.fetch(issueURL + sprintId + "/issue?jql=cf[11502] is not empty&fields=epic", fetchArgs);
+  if (httpResponse) {
+    let rspns = httpResponse.getResponseCode();
+    if (rspns === 200) {
+      let data = JSON.parse(httpResponse.getContentText());
+      let roadMapIssueCount = 0;
+      for (let i=0; i<data.issues.length; i++) {
+        for (let r = 0;  r < roadmap.length; r++) {
+          if (roadmap[r].key == data.issues[i].fields.epic.key ) {
+            roadMapIssueCount++;
+            break;
+          }
+        }
+        sourceSheet.getRange(row, 12, 1, 1).setValue(data.total);
+        sourceSheet.getRange(row, 13, 1, 1).setValue(roadMapIssueCount);
+      }
+    } else {
+      SpreadsheetApp.getUi().alert(
+          "Jira Error: Unable to make requests to " + issueURL + ": " + rspns
+      );
+    }
+  }
+
   SpreadsheetApp.flush();
 }
