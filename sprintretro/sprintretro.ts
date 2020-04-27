@@ -4,6 +4,7 @@ let sprintURL = "https://hootsuite.atlassian.net/rest/agile/1.0/board/"
 let issueURL = "https://hootsuite.atlassian.net/rest/agile/1.0/sprint/"
 let searchURL = "https://hootsuite.atlassian.net/rest/api/3/search?jql=filter=21017&type=epic&fields=key"
 let username = "lei.guo@hootsuite.com";
+let password = "aI8n1UXSGqwKRXb7XAJI69DF";
 let encCred = Utilities.base64Encode(username + ":" + password);
 let roadmap: Array[string] ;
 
@@ -89,10 +90,11 @@ function updateSprints(boardId: string) {
 
 function updateSprint(row: number, sprintId: string, boardId: string) {
   let httpResponse = UrlFetchApp.fetch(baseURL+boardId+"&sprintId=" + sprintId, fetchArgs);
+  var data
   if (httpResponse) {
     let rspns = httpResponse.getResponseCode();
     if (rspns === 200) {
-      let data = JSON.parse(httpResponse.getContentText());
+      data = JSON.parse(httpResponse.getContentText());
       sourceSheet.getRange(row, 1, 1, 1).setValue(boardId);
       sourceSheet.getRange(row, 2, 1, 1).setValue(teamBoardIds[boardId]);
       sourceSheet.getRange(row, 3, 1, 1).setValue(sprintId);
@@ -112,21 +114,31 @@ function updateSprint(row: number, sprintId: string, boardId: string) {
   }
 
   //Update Issue counts
-  httpResponse = UrlFetchApp.fetch(issueURL + sprintId + "/issue?jql=cf[11502] is not empty&fields=epic", fetchArgs);
+  httpResponse = UrlFetchApp.fetch(issueURL + sprintId + "/issue?jql=cf[11502] is not empty&fields=epic,resolution,resolutiondate", fetchArgs);
   if (httpResponse) {
     let rspns = httpResponse.getResponseCode();
     if (rspns === 200) {
-      let data = JSON.parse(httpResponse.getContentText());
+      let issueData = JSON.parse(httpResponse.getContentText());
       let roadMapIssueCount = 0;
-      for (let i=0; i<data.issues.length; i++) {
+      let roadMapCompletion = 0;
+      for (let i=0; i<issueData.issues.length; i++) {
         for (let r = 0;  r < roadmap.length; r++) {
-          if (roadmap[r].key == data.issues[i].fields.epic.key ) {
+          if (roadmap[r].key == issueData.issues[i].fields.epic.key ) {
             roadMapIssueCount++;
+            if (issueData.issues[i].fields.resolution != null && issueData.issues[i].fields.resolution.name == "Done" ) {
+              let resolutionDate = new Date(issueData.issues[i].fields.resolutiondate)
+              let sprintStartDate = new Date(data.sprint.isoStartDate)
+              let sprintEndDate = new Date(data.sprint.isoEndDate)
+              if (resolutionDate >= sprintStartDate && resolutionDate <= sprintEndDate ) {
+                roadMapCompletion++;
+              }
+            }
             break;
           }
         }
-        sourceSheet.getRange(row, 12, 1, 1).setValue(data.total);
+        sourceSheet.getRange(row, 12, 1, 1).setValue(issueData.total);
         sourceSheet.getRange(row, 13, 1, 1).setValue(roadMapIssueCount);
+        sourceSheet.getRange(row, 14, 1, 1).setValue(roadMapCompletion);
       }
     } else {
       SpreadsheetApp.getUi().alert(
