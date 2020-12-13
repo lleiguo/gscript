@@ -1,3 +1,6 @@
+// Compiled using ts2gas 3.4.4 (TypeScript 3.7.2)
+var exports = exports || {};
+var module = module || { exports: exports };
 var sourceSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sprint Predicability");
 var baseURL = "https://hootsuite.atlassian.net/rest/greenhopper/latest/rapid/charts/sprintreport?rapidViewId=";
 var sprintURL = "https://hootsuite.atlassian.net/rest/agile/1.0/board/";
@@ -29,7 +32,7 @@ function update() {
         SpreadsheetApp.getUi().alert("No source sheet present!");
         return;
     }
-    sourceSheet.deleteRows(2, sourceSheet.getLastRow());
+    sourceSheet.deleteRows(2, sourceSheet.getLastRow()-1);
     getRoadmap();
     for (var boardId in teamBoardIds) {
         if (!isNaN(boardId)) {

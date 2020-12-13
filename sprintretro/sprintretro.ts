@@ -33,7 +33,7 @@ function update() {
         return;
       }
 
-    sourceSheet.deleteRows(2, sourceSheet.getLastRow())
+    sourceSheet.deleteRows(2, sourceSheet.getLastRow()-1)
 
     getRoadmap()
 
