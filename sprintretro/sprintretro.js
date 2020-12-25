@@ -5,10 +5,8 @@ var sourceSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sprint P
 var baseURL = "https://hootsuite.atlassian.net/rest/greenhopper/latest/rapid/charts/sprintreport?rapidViewId=";
 var sprintURL = "https://hootsuite.atlassian.net/rest/agile/1.0/board/";
 var issueURL = "https://hootsuite.atlassian.net/rest/agile/1.0/sprint/";
-var searchURL = "https://hootsuite.atlassian.net/rest/api/3/search?jql=filter=21017&type=epic&fields=key";
-var username = "lei.guo@hootsuite.com";
-var password = "aI8n1UXSGqwKRXb7XAJI69DF";
-var encCred = Utilities.base64Encode(username + ":" + password);
+var searchURL = "https://hootsuite.atlassian.net/rest/api/3/search?jql=filter=21389&type=epic&fields=key";
+var encCred = Utilities.base64Encode("lei.guo@hootsuite.com:aI8n1UXSGqwKRXb7XAJI69DF");
 var roadmap;
 var teamBoardIds;
 (function (teamBoardIds) {
@@ -32,7 +30,9 @@ function update() {
         SpreadsheetApp.getUi().alert("No source sheet present!");
         return;
     }
-    sourceSheet.deleteRows(2, sourceSheet.getLastRow()-1);
+    if (sourceSheet.getLastRow() >= 2) {
+        sourceSheet.deleteRows(2, sourceSheet.getLastRow()-1);
+    }
     getRoadmap();
     for (var boardId in teamBoardIds) {
         if (!isNaN(boardId)) {
