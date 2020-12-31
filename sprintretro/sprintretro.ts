@@ -32,7 +32,7 @@ function update() {
       }
 
     if (sourceSheet.getLastRow() >= 2) {
-      sourceSheet.deleteRows(2, getLastRowSpecial(sourceSheet.getDataRange())-1)
+      sourceSheet.deleteRows(2, getLastRowSpecial(sourceSheet.getRange("A:A").getValues())-1)
     }  
 
     getRoadmap()
