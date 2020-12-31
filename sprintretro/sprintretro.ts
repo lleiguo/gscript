@@ -2,10 +2,8 @@ let sourceSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sprint P
 let baseURL = "https://hootsuite.atlassian.net/rest/greenhopper/latest/rapid/charts/sprintreport?rapidViewId=";
 let sprintURL = "https://hootsuite.atlassian.net/rest/agile/1.0/board/"
 let issueURL = "https://hootsuite.atlassian.net/rest/agile/1.0/sprint/"
-let searchURL = "https://hootsuite.atlassian.net/rest/api/3/search?jql=filter=21017&type=epic&fields=key"
-let username = "lei.guo@hootsuite.com";
-let password = "aI8n1UXSGqwKRXb7XAJI69DF";
-let encCred = Utilities.base64Encode(username + ":" + password);
+let searchURL = "https://hootsuite.atlassian.net/rest/api/3/search?jql=filter=21389&type=epic&fields=key"
+let encCred = Utilities.base64Encode("lei.guo@hootsuite.com:aI8n1UXSGqwKRXb7XAJI69DF");
 let roadmap: Array[string] ;
 
 enum teamBoardIds {
@@ -33,7 +31,9 @@ function update() {
         return;
       }
 
-    sourceSheet.deleteRows(2, sourceSheet.getLastRow()-1)
+    if (sourceSheet.getLastRow() >= 2) {
+      sourceSheet.deleteRows(2, getLastRowSpecial(sourceSheet.getDataRange())-1)
+    }  
 
     getRoadmap()
 
@@ -43,6 +43,20 @@ function update() {
       }
   }
 }
+
+function getLastRowSpecial(range){
+  var rowNum = 0;
+  var blank = false;
+  for(var row = 0; row < range.length; row++){
+    if(range[row][0] === "" && !blank){
+      rowNum = row;
+      blank = true;
+    }else if(range[row][0] !== ""){
+      blank = false;
+    };
+  };
+  return rowNum;
+};
 
 function getRoadmap() {
   let httpResponse = UrlFetchApp.fetch(searchURL, fetchArgs);
