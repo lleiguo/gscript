@@ -41,22 +41,22 @@ function update() {
       if (!isNaN(boardId)) {
         updateSprints(boardId);
       }
-  }
+   }
 }
 
 function getLastRowSpecial(range){
-  var rowNum = 0;
-  var blank = false;
-  for(var row = 0; row < range.length; row++){
+  let rowNum = 0;
+  let blank = false;
+  for(let row = 0; row < range.length; row++){
     if(range[row][0] === "" && !blank){
       rowNum = row;
       blank = true;
     }else if(range[row][0] !== ""){
       blank = false;
-    };
-  };
+    }
+  }
   return rowNum;
-};
+}
 
 function getRoadmap() {
   let httpResponse = UrlFetchApp.fetch(searchURL, fetchArgs);
