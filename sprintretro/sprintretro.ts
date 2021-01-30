@@ -120,7 +120,7 @@ function updateSprint(row: number, sprintId: string, boardId: string) {
       sourceSheet.getRange(row, 9, 1, 1).setValue(data.contents.issuesCompletedInAnotherSprint.length);
       sourceSheet.getRange(row, 10, 1, 1).setValue(data.sprint.startDate);
       sourceSheet.getRange(row, 11, 1, 1).setValue(data.sprint.endDate);
-      sourceSheet.getRange(row, 15, 1, 1).setValue(data.contents.completedIssuesEstimateSum);
+      sourceSheet.getRange(row, 15, 1, 1).setValue(data.contents.completedIssuesEstimateSum.value);
     } else {
       SpreadsheetApp.getUi().alert(
         "Jira Error: Unable to make requests to " + baseURL + ": " + rspns
