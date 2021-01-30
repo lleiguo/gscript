@@ -117,7 +117,7 @@ function updateSprints(boardId: string) {
 function sprintExist(sprintId: number) {
   let sprintIds = sourceSheet.getDataRange().getValues()
   for (let i = 0; i < sprintIds.length; ++i){
-    if (sprintIds[i][0] == sprintId) {
+    if (sprintIds[i][2] == sprintId) {
        return true;
     }
   }
