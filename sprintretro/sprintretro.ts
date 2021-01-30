@@ -15,7 +15,7 @@ enum teamBoardIds {
   "DODGES" = 643,
   "ENGAGE - Red" = 577,
   "ENGAGE - Phoenix" = 775,
-  //"MOBILE - Artemis" = 751,
+  "MOBILE - Artemis" = 751,
   "MOBILE - Apollo" = 752,
   "P+C - Load Lifter" = 497,
   "P+C - Yoda" = 827,
