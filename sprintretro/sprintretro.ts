@@ -43,9 +43,9 @@ function update() {
         return;
       }
 
-    if (sourceSheet.getLastRow() >= 2) {
-      sourceSheet.deleteRows(2, getLastRowSpecial(sourceSheet.getRange("A:A").getValues())-1)
-    }  
+    // if (sourceSheet.getLastRow() >= 2) {
+    //   sourceSheet.deleteRows(2, getLastRowSpecial(sourceSheet.getRange("A:A").getValues())-1)
+    // }  
 
     getRoadmap()
 
@@ -101,7 +101,7 @@ function updateSprints(boardId: string) {
           let sprintId = sprints[i].id;
           let startDate = sprints[i].startDate
           
-          if(Date.parse(startDate) > Date.parse("2019-01-01")) {
+          if(Date.parse(startDate) > Date.parse("2019-01-01") && !sprintExist(sprintId)) {
             updateSprint(sourceSheet.getLastRow()+1, sprintId, boardId)
           }
         }
@@ -112,6 +112,16 @@ function updateSprints(boardId: string) {
       }
     }
   }
+}
+
+function sprintExist(sprintId: number) {
+  let sprintIds = sourceSheet.getDataRange().getValues()
+  for (let i = 0; i < sprintIds.length; ++i){
+    if (sprintIds[i][0] == sprintId) {
+       return true;
+    }
+  }
+  return false;
 }
 
 function updateSprint(row: number, sprintId: string, boardId: string) {
