@@ -7,6 +7,39 @@ let encCred = Utilities.base64Encode("lei.guo@hootsuite.com:aI8n1UXSGqwKRXb7XAJI
 let roadmap: Array[string] ;
 
 enum teamBoardIds {
+  "POD-Cloud Reliability" = 711,
+  "POD-POD Measure" = 813,
+  "POD-Build Test Deploy" = 702,
+  "POD-Observability" = 820,
+  "PIF-IDENTITY" = 605,
+  "PIF-CI-Hippogriff" = 860,
+  "PIF-CI-Cerebus" = 861,
+  "PIF-Machine Learning" = 603,
+  "PIF-Billing" = 297,
+  //"Promote-Yoda" = 827,
+  "Promote-Doges" = 643,
+  "Promote-Advengers" = 825,
+  //"Social Selling-Kraken" = 000,
+  //"Social Selling-Codeful8" = 000,
+  "DataTech-DataTech" = 532,
+  "ENGAGE-Zapdos" = 459,
+  "ENGAGE-Red" = 577,
+  "ENGAGE-Phoenix" = 775,
+  "IMPACT-Impact" = 558,
+  "MOBILE-Artemis" = 751,
+  "MOBILE-Apollo" = 752,
+  "P+C-Load Lifter" = 497,
+  "P+C-Yoda" = 827,
+  "P+C-P+C All Teams" = 370,
+  //"P+C-Rogue" = 000,
+  //"P+C-Storm" = 000,
+  //"P+C-Binary" = 000,
+  //"P+C-R2-D2" = 000,
+  "PLATFORM-BE Platform" = 591,
+  "PLATFORM-FE Platform" = 834,
+  "PLATFORM-Legacy Platform" = 792,
+  "ANALYTICS-Analytics" = 327,
+  "PRODUCT GROWTH-Acquisition" = 818,
   "PRODUCT GROWTH-Retention" = 778
 }
 
@@ -99,8 +132,8 @@ function updateSprint(row: number, sprintId: string, boardId: string) {
     if (rspns === 200) {
       data = JSON.parse(httpResponse.getContentText());
       sourceSheet.getRange(row, 1, 1, 1).setValue(boardId);
-      sourceSheet.getRange(row, 2, 1, 1).setValue(teamBoardIds[boardId].substring(0, teamBoardIds[boardId].indexOf("-")-1));
-      sourceSheet.getRange(row, 3, 1, 1).setValue(teamBoardIds[boardId].substring(teamBoardIds[boardId].indexOf("-"), teamBoardIds[boardId].length)-1);
+      sourceSheet.getRange(row, 2, 1, 1).setValue(teamBoardIds[boardId].substring(0, teamBoardIds[boardId].indexOf("-")));
+      sourceSheet.getRange(row, 3, 1, 1).setValue(teamBoardIds[boardId].substring(teamBoardIds[boardId].indexOf("-"), teamBoardIds[boardId].length));
       sourceSheet.getRange(row, 4, 1, 1).setValue(sprintId);
       sourceSheet.getRange(row, 5, 1, 1).setValue(data.sprint.name);
       sourceSheet.getRange(row, 6, 1, 1).setValue(data.contents.completedIssues.length);
