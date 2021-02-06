@@ -5,6 +5,7 @@ let issueURL = "https://hootsuite.atlassian.net/rest/agile/1.0/sprint/"
 let searchURL = "https://hootsuite.atlassian.net/rest/api/3/search?jql=filter=21389&type=epic&fields=key"
 let encCred = Utilities.base64Encode("lei.guo@hootsuite.com:aI8n1UXSGqwKRXb7XAJI69DF");
 let roadmap: Array[string] ;
+let sprintIdColumnIndex = 3;
 
 enum teamBoardIds {
   "POD-Cloud Reliability" = 711,
@@ -117,7 +118,7 @@ function updateSprints(boardId: string) {
 function sprintExist(sprintId: number) {
   let sprintIds = sourceSheet.getDataRange().getValues()
   for (let i = 0; i < sprintIds.length; ++i){
-    if (sprintIds[i][2] == sprintId) {
+    if (sprintIds[i][sprintIdColumnIndex] == sprintId) {
        return true;
     }
   }
