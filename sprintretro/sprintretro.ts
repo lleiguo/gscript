@@ -133,7 +133,7 @@ function updateSprint(row: number, sprintId: string, boardId: string) {
       data = JSON.parse(httpResponse.getContentText());
       sourceSheet.getRange(row, 1, 1, 1).setValue(boardId);
       sourceSheet.getRange(row, 2, 1, 1).setValue(teamBoardIds[boardId].substring(0, teamBoardIds[boardId].indexOf("-")));
-      sourceSheet.getRange(row, 3, 1, 1).setValue(teamBoardIds[boardId].substring(teamBoardIds[boardId].indexOf("-"), teamBoardIds[boardId].length));
+      sourceSheet.getRange(row, 3, 1, 1).setValue(teamBoardIds[boardId].substring(teamBoardIds[boardId].indexOf("-")+1, teamBoardIds[boardId].length));
       sourceSheet.getRange(row, 4, 1, 1).setValue(sprintId);
       sourceSheet.getRange(row, 5, 1, 1).setValue(data.sprint.name);
       sourceSheet.getRange(row, 6, 1, 1).setValue(data.contents.completedIssues.length);
