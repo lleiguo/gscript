@@ -19,7 +19,6 @@ enum teamBoardIds {
   "PIF-Billing" = 297,
   //"Promote-Yoda" = 827,
   "Promote-Doges" = 643,
-  "Promote-Advengers" = 825,
   //"Social Selling-Kraken" = 000,
   //"Social Selling-Codeful8" = 000,
   "DataTech-DataTech" = 532,
@@ -37,8 +36,6 @@ enum teamBoardIds {
   //"P+C-Binary" = 000,
   //"P+C-R2-D2" = 000,
   "PLATFORM-BE Platform" = 591,
-  "PLATFORM-FE Platform" = 834,
-  "PLATFORM-Legacy Platform" = 792,
   "ANALYTICS-Analytics" = 327,
   "PRODUCT GROWTH-Acquisition" = 818,
   "PRODUCT GROWTH-Retention" = 778
