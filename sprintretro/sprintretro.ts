@@ -7,22 +7,7 @@ let encCred = Utilities.base64Encode("lei.guo@hootsuite.com:aI8n1UXSGqwKRXb7XAJI
 let roadmap: Array[string] ;
 
 enum teamBoardIds {
-  "PCRE" = 711,
-  "PODM" = 813,
-  "PBTD" = 702,
-  "POBS" = 820,
-  "IDENTITY" = 605,
-  "DODGES" = 643,
-  "ENGAGE - Red" = 577,
-  "ENGAGE - Phoenix" = 775,
-  "MOBILE - Artemis" = 751,
-  "MOBILE - Apollo" = 752,
-  "P+C - Load Lifter" = 497,
-  "P+C - Yoda" = 827,
-  "PLATFORM - Backend" = 591,
-  "ANALYTICS" = 327,
-  "IMPACT" = 558,
-  "PRODUCT GROWTH - Accquisition" = 818
+  "PRODUCT GROWTH-Retention" = 778
 }
 
 let fetchArgs = {
@@ -43,10 +28,6 @@ function update() {
         return;
       }
 
-    // if (sourceSheet.getLastRow() >= 2) {
-    //   sourceSheet.deleteRows(2, getLastRowSpecial(sourceSheet.getRange("A:A").getValues())-1)
-    // }  
-
     getRoadmap()
 
     for (let boardId in teamBoardIds) {
@@ -54,20 +35,6 @@ function update() {
         updateSprints(boardId);
       }
    }
-}
-
-function getLastRowSpecial(range){
-  let rowNum = 0;
-  let blank = false;
-  for(let row = 0; row < range.length; row++){
-    if(range[row][0] === "" && !blank){
-      rowNum = row;
-      blank = true;
-    }else if(range[row][0] !== ""){
-      blank = false;
-    }
-  }
-  return rowNum;
 }
 
 function getRoadmap() {
@@ -132,17 +99,18 @@ function updateSprint(row: number, sprintId: string, boardId: string) {
     if (rspns === 200) {
       data = JSON.parse(httpResponse.getContentText());
       sourceSheet.getRange(row, 1, 1, 1).setValue(boardId);
-      sourceSheet.getRange(row, 2, 1, 1).setValue(teamBoardIds[boardId]);
-      sourceSheet.getRange(row, 3, 1, 1).setValue(sprintId);
-      sourceSheet.getRange(row, 4, 1, 1).setValue(data.sprint.name);
-      sourceSheet.getRange(row, 5, 1, 1).setValue(data.contents.completedIssues.length);
-      sourceSheet.getRange(row, 6, 1, 1).setValue(data.contents.issuesNotCompletedInCurrentSprint.length);
-      sourceSheet.getRange(row, 7, 1, 1).setValue(Object.keys(data.contents.issueKeysAddedDuringSprint).length);
-      sourceSheet.getRange(row, 8, 1, 1).setValue(data.contents.puntedIssues.length);
-      sourceSheet.getRange(row, 9, 1, 1).setValue(data.contents.issuesCompletedInAnotherSprint.length);
-      sourceSheet.getRange(row, 10, 1, 1).setValue(data.sprint.startDate);
-      sourceSheet.getRange(row, 11, 1, 1).setValue(data.sprint.endDate);
-      sourceSheet.getRange(row, 15, 1, 1).setValue(data.contents.completedIssuesEstimateSum.value);
+      sourceSheet.getRange(row, 2, 1, 1).setValue(teamBoardIds[boardId].substring(0, teamBoardIds[boardId].indexOf("-")-1));
+      sourceSheet.getRange(row, 3, 1, 1).setValue(teamBoardIds[boardId].substring(teamBoardIds[boardId].indexOf("-"), teamBoardIds[boardId].length)-1);
+      sourceSheet.getRange(row, 4, 1, 1).setValue(sprintId);
+      sourceSheet.getRange(row, 5, 1, 1).setValue(data.sprint.name);
+      sourceSheet.getRange(row, 6, 1, 1).setValue(data.contents.completedIssues.length);
+      sourceSheet.getRange(row, 7, 1, 1).setValue(data.contents.issuesNotCompletedInCurrentSprint.length);
+      sourceSheet.getRange(row, 8, 1, 1).setValue(Object.keys(data.contents.issueKeysAddedDuringSprint).length);
+      sourceSheet.getRange(row, 9, 1, 1).setValue(data.contents.puntedIssues.length);
+      sourceSheet.getRange(row, 10, 1, 1).setValue(data.contents.issuesCompletedInAnotherSprint.length);
+      sourceSheet.getRange(row, 11, 1, 1).setValue(data.sprint.startDate);
+      sourceSheet.getRange(row, 12, 1, 1).setValue(data.sprint.endDate);
+      sourceSheet.getRange(row, 16, 1, 1).setValue(data.contents.completedIssuesEstimateSum.value);
     } else {
       SpreadsheetApp.getUi().alert(
         "Jira Error: Unable to make requests to " + baseURL + ": " + rspns
@@ -173,9 +141,9 @@ function updateSprint(row: number, sprintId: string, boardId: string) {
             break;
           }
         }
-        sourceSheet.getRange(row, 12, 1, 1).setValue(issueData.total);
-        sourceSheet.getRange(row, 13, 1, 1).setValue(roadMapIssueCount);
-        sourceSheet.getRange(row, 14, 1, 1).setValue(roadMapCompletion);
+        sourceSheet.getRange(row, 13, 1, 1).setValue(issueData.total);
+        sourceSheet.getRange(row, 14, 1, 1).setValue(roadMapIssueCount);
+        sourceSheet.getRange(row, 15, 1, 1).setValue(roadMapCompletion);
       }
     } else {
       SpreadsheetApp.getUi().alert(
