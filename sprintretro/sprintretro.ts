@@ -161,7 +161,7 @@ function updateSprint(row: number, sprintId: string, boardId: string) {
       let roadMapCompletion = 0;
       for (let i=0; i<issueData.issues.length; i++) {
         for (let r = 0;  r < roadmap.length; r++) {
-          if (roadmap[r].key == issueData.issues[i].fields.epic.key ) {
+          if (roadmap[r] != null && issueData.issues[i].fields.epic != null && roadmap[r].key == issueData.issues[i].fields.epic.key ) {
             roadMapIssueCount++;
             if (issueData.issues[i].fields.resolution != null && issueData.issues[i].fields.resolution.name == "Done" ) {
               let resolutionDate = new Date(issueData.issues[i].fields.resolutiondate)
