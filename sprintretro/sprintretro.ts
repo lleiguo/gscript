@@ -8,7 +8,6 @@ let roadmap: Array[string] ;
 let sprintIdColumnIndex = 3;
 
 enum teamBoardIds {
-  "POD-Cloud Reliability" = 711,
   "POD-POD Measure" = 813,
   "POD-Build Test Deploy" = 702,
   "POD-Observability" = 820,
