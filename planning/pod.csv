@@ -1,5 +1,4 @@
 name,area,positioName,id,parentId
-Lei Guo,Overhead,"Senior Director, POD",Lei Guo,
 Armin Sameti,Backend Platform,"Software Developer, DevOps",Armin Sameti,Amir Abdolrazaghi
 Jef Rubert,Backend Platform,Senior Software Developer,Jef Rubert,Amir Abdolrazaghi
 Jonatas Barbosa,Backend Platform,Software Developer,Jonatas Barbosa,Amir Abdolrazaghi
@@ -51,3 +50,4 @@ Eliot Aharon,SRE,"Staff Developer, DevOps",Eliot Aharon,Lei Guo
 Ana Barajas Baez,SRE,"Software Developer, DevOps",Ana Barajas Baez,Lei Guo
 Samantha Toner,SRE,"Operations Developer, DevOps",Samantha Toner,Lei Guo
 Steven Shi,SRE,"Senior Software Developer, DevOps",Steven Shi,Lei Guo
+Lei Guo,Overhead,"Senior Director, POD",Lei Guo,
