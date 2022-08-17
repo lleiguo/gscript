@@ -15,7 +15,7 @@
     <script>
       var chart;
       d3.csv(
-        'https://docs.google.com/spreadsheets/d/e/2PACX-1vRAqy04fIJp-JbTQXU00o6o6haAwj-PYAmfPPVaK7ho9wgzidJvRp-NVJhtYE1F_6AVGEXyxuhWKZGf/pub?gid=0&single=true&output=csv'
+        'https://raw.githubusercontent.com/lleiguo/gscript/master/planning/pod.csv'
       ).then((dataFlattened) => {
         chart = new d3.OrgChart()
           .container('.chart-container')
