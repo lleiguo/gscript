@@ -1,15 +1,15 @@
 name,area,positioName,id,parentId
-Lei Guo,Overhead,"Senior Director, POD",Lei Guo,
-Armin Sameti,Backend Platform,"Software Developer, DevOps",Armin Sameti,Amir Abdolrazaghi
+Lei Guo,Overhead,Senior Director, POD,Lei Guo,
+Armin Sameti,Backend Platform,Software Developer, DevOps,Armin Sameti,Amir Abdolrazaghi
 Jef Rubert,Backend Platform,Senior Software Developer,Jef Rubert,Amir Abdolrazaghi
 Jonatas Barbosa,Backend Platform,Software Developer,Jonatas Barbosa,Amir Abdolrazaghi
 Nur Ozgun,Backend Platform,Software Developer,Nur Ozgun,Amir Abdolrazaghi
 Michael Wagler,Backend Platform,Software Developer,Michael Wagler,Amir Abdolrazaghi
 Jason Moore,Backend Platform,Staff Developer,Jason Moore,Jeff Stautz
 Ken Ho,Backend Platform,Senior Software Developer,Ken Ho,Amir Abdolrazaghi
-Mike Monaghan,BTD,"Software Developer, DevOps",Mike Monaghan,Matt Moor
-Ryan Sadler,BTD,"Senior Software Developer, DevOps",Ryan Sadler,Matt Moor
-Simone Payne,BTD,"Senior Software Developer, DevOps",Simone Payne,Matt Moor
+Mike Monaghan,BTD,Software Developer, DevOps,Mike Monaghan,Matt Moor
+Ryan Sadler,BTD,Senior Software Developer, DevOps,Ryan Sadler,Matt Moor
+Simone Payne,BTD,Senior Software Developer, DevOps,Simone Payne,Matt Moor
 Cornelia-Gabriela David,Front-end Platform,Junior Software Developer,Cornelia-Gabriela David,Jeff Stautz
 Adriana Caciur,Front-end Platform,Software Developer,Adriana Caciur,Jeff Stautz
 Daniel Rusu,Front-end Platform,Staff Developer,Daniel Rusu,Jeff Stautz
@@ -21,33 +21,33 @@ Alvaro Sanchez,Legacy Platform,Senior Software Developer,Alvaro Sanchez,Steve Cu
 Claude Vessaz,Legacy Platform,Staff Developer,Claude Vessaz,Steve Cullingworth
 Kaitlyn Melton,Legacy Platform,Senior Software Developer,Kaitlyn Melton,Steve Cullingworth
 Riccardo Galli,Legacy Platform,Staff Developer,Riccardo Galli,Jeff Stautz
-Amir Abdolrazaghi,Overhead,"Manager, Development",Amir Abdolrazaghi,Jeff Stautz
-Shawn Wowk,Overhead,"Manager, Development Operations",Shawn Wowk,Lei Guo
-Matt Moor,Overhead,"Senior Manager, Software Development",Matt Moor,Lei Guo
+Amir Abdolrazaghi,Overhead,Manager, Development,Amir Abdolrazaghi,Jeff Stautz
+Shawn Wowk,Overhead,Manager, Development Operations,Shawn Wowk,Lei Guo
+Matt Moor,Overhead,Senior Manager, Software Development,Matt Moor,Lei Guo
 Shelby Moore,Overhead,Senior Staff Developer,Shelby Moore,Lei Guo
 Jessie Ye,Overhead,Technical Product Manager,Jessie Ye,Lei Guo
-Stefan Serban,Overhead,"Manager, DevOps",Stefan Serban,Lei Guo
-Steve Cullingworth,Overhead,"Manager, Development",Steve Cullingworth,Jeff Stautz
-Jeff Stautz,Overhead,"Senior Manager, Development",Jeff Stautz,Lei Guo
-Ben Bertrands [C],PCP,"Software Developer, DevOps",Ben Bertrands [C],Shawn Wowk
-Frans Guelinckx [C],PCP,"Software Developer, DevOps",Frans Guelinckx [C],Shawn Wowk
+Stefan Serban,Overhead,Manager, DevOps,Stefan Serban,Lei Guo
+Steve Cullingworth,Overhead,Manager, Development,Steve Cullingworth,Jeff Stautz
+Jeff Stautz,Overhead,Senior Manager, Development,Jeff Stautz,Lei Guo
+Ben Bertrands [C],PCP,Software Developer, DevOps,Ben Bertrands [C],Shawn Wowk
+Frans Guelinckx [C],PCP,Software Developer, DevOps,Frans Guelinckx [C],Shawn Wowk
 Johan Vandeweerd [C],PCP,Sr. DevOps Engineering,Johan Vandeweerd [C],Shawn Wowk
 Kristof Lemmens [C],PCP,Sr. DevOps Engineering,Kristof Lemmens [C],Shawn Wowk
-Ben Turner,PCP,"Intermediate Developer, Operations",Ben Turner,Shawn Wowk
-Shuai Hao,PCP,"Senior Software Developer, DevOps",Shuai Hao,Shawn Wowk
+Ben Turner,PCP,Intermediate Developer, Operations,Ben Turner,Shawn Wowk
+Shuai Hao,PCP,Senior Software Developer, DevOps,Shuai Hao,Shawn Wowk
 Brandon McRae,PCP,Staff Software Developer,Brandon McRae,Shawn Wowk
-Robert Becker,POBS,"Senior Software Developer, DevOps",Robert Becker,Jay Mikhail
-Jay Mikhail,POBS,"Lead, Development, DevOps",Jay Mikhail,Matt Moor
-Brian Groux,POBS,"Staff Developer, DevOps",Brian Groux,Lei Guo
-Christopher Read,POBS,"Senior Software Developer, DevOps",Christopher Read,Jay Mikhail
-Mihai-Cristian Cherechesu,POD Measure,"Software Developer, DevOps",Mihai-Cristian Cherechesu,Stefan Serban
-Roberto Sebastiano,POD Measure,"Senior Software Developer, DevOps",Roberto Sebastiano,Stefan Serban
-Vladimir Iacob,POD Measure,"Software Developer, DevOps",Vladimir Iacob,Stefan Serban
-Vlad-Cosmin Icatoiu,POD Measure,"Software Developer, DevOps",Vlad-Cosmin Icatoiu,Stefan Serban
-Lorenzo Junior Ferrara,POD Measure,"Software Developer, DevOps",Lorenzo Junior Ferrara,Stefan Serban
-Cristian Marin,POD Measure,"Lead Development, DevOps",Cristian Marin,Stefan Serban
-Ivan Hoo,SRE,"Software Developer, DevOps",Ivan Hoo,Lei Guo
-Eliot Aharon,SRE,"Staff Developer, DevOps",Eliot Aharon,Lei Guo
-Ana Barajas Baez,SRE,"Software Developer, DevOps",Ana Barajas Baez,Lei Guo
-Samantha Toner,SRE,"Operations Developer, DevOps",Samantha Toner,Lei Guo
-Steven Shi,SRE,"Senior Software Developer, DevOps",Steven Shi,Lei Guo
+Robert Becker,POBS,Senior Software Developer, DevOps,Robert Becker,Jay Mikhail
+Jay Mikhail,POBS,Lead, Development, DevOps,Jay Mikhail,Matt Moor
+Brian Groux,POBS,Staff Developer, DevOps,Brian Groux,Lei Guo
+Christopher Read,POBS,Senior Software Developer, DevOps,Christopher Read,Jay Mikhail
+Mihai-Cristian Cherechesu,POD Measure,Software Developer, DevOps,Mihai-Cristian Cherechesu,Stefan Serban
+Roberto Sebastiano,POD Measure,Senior Software Developer, DevOps,Roberto Sebastiano,Stefan Serban
+Vladimir Iacob,POD Measure,Software Developer, DevOps,Vladimir Iacob,Stefan Serban
+Vlad-Cosmin Icatoiu,POD Measure,Software Developer, DevOps,Vlad-Cosmin Icatoiu,Stefan Serban
+Lorenzo Junior Ferrara,POD Measure,Software Developer, DevOps,Lorenzo Junior Ferrara,Stefan Serban
+Cristian Marin,POD Measure,Lead Development, DevOps,Cristian Marin,Stefan Serban
+Ivan Hoo,SRE,Software Developer, DevOps,Ivan Hoo,Lei Guo
+Eliot Aharon,SRE,Staff Developer, DevOps,Eliot Aharon,Lei Guo
+Ana Barajas Baez,SRE,Software Developer, DevOps,Ana Barajas Baez,Lei Guo
+Samantha Toner,SRE,Operations Developer, DevOps,Samantha Toner,Lei Guo
+Steven Shi,SRE,Senior Software Developer, DevOps,Steven Shi,Lei Guo
