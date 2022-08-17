@@ -1,3 +1,3 @@
-name,area,profileUrl,office,tags,isLoggedUser,positionName,id,parentId,size
-Shawn Wowk,PCP,,,,false,Manager,shawn.wowk,,
-Shuai Hao,PCP,,,,false,Senior Developer,shuai.hao,shawn.wowk,
+name,area,positionName,id,parentId,size
+Shawn Wowk,PCP,Manager,shawn.wowk,,
+Shuai Hao,PCP,Senior Developer,shuai.hao,shawn.wowk,
