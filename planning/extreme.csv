@@ -1,0 +1,47 @@
+name,area,positionName,id,parentId
+Armin Sameti,Backend Platform,Software Developer DevOps,Armin Sameti,Brandon McRae
+Jef Rubert,Backend Platform,Senior Software Developer,Jef Rubert,Amir Abdolrazaghi
+Jonatas Barbosa,Backend Platform,Software Developer,Jonatas Barbosa,Amir Abdolrazaghi
+Nur Ozgun,Backend Platform,Software Developer,Nur Ozgun,Amir Abdolrazaghi
+Michael Wagler,Backend Platform,Software Developer,Michael Wagler,Brandon McRae
+Jason Moore,Backend Platform,Staff Developer,Jason Moore,Amir Abdolrazaghi
+Ken Ho,Backend Platform,Senior Software Developer,Ken Ho,Brandon McRae
+Mike Monaghan,BTD,Software Developer DevOps,Mike Monaghan,Jay Mikhail
+Ryan Sadler,BTD,Senior Software Developer DevOps,Ryan Sadler,Shawn Wowk
+Simone Payne,BTD,Senior Software Developer DevOps,Simone Payne,Jay Mikhail
+Adriana Caciur,Front-end Platform,Software Developer,Adriana Caciur,Steve Cullingworth
+Daniel Rusu,Front-end Platform,Staff Developer,Daniel Rusu,Steve Cullingworth
+Sabin Marcu,Front-end Platform,Senior Software Developer,Sabin Marcu,Steve Cullingworth
+Mario Flores,Legacy Platform,Senior Software Developer,Mario Flores,Steve Cullingworth
+Michael Peng,Legacy Platform,Software Developer,Michael Peng,Amir Abdolrazaghi
+Indu Kumar,Legacy Platform,Junior Software Developer,Indu Kumar,Steve Cullingworth
+Alvaro Sanchez,Legacy Platform,Senior Software Developer,Alvaro Sanchez,Steve Cullingworth
+Claude Vessaz,Legacy Platform,Staff Developer,Claude Vessaz,Amir Abdolrazaghi
+Kaitlyn Melton,Legacy Platform,Senior Software Developer,Kaitlyn Melton,Amir Abdolrazaghi
+Riccardo Galli,Legacy Platform,Staff Developer,Riccardo Galli,Steve Cullingworth
+Amir Abdolrazaghi,Overhead,Manager Development,Amir Abdolrazaghi,Lei Guo
+Shawn Wowk,Overhead,Manager Development Operations,Shawn Wowk,Lei Guo
+Matt Moor,Overhead,Senior Manager Software Development,Matt Moor,Lei Guo
+Shelby Moore,Overhead,Senior Staff Developer,Shelby Moore,Lei Guo
+Jessie Ye,Overhead,Technical Product Manager,Jessie Ye,Lei Guo
+Stefan Serban,Overhead,Manager DevOps,Stefan Serban,Lei Guo
+Steve Cullingworth,Overhead,Manager Development,Steve Cullingworth,Lei Guo
+Ben Bertrands,PCP,Software Developer DevOps,Ben Bertrands,Shawn Wowk
+Frans Guelinckx,PCP,Software Developer DevOps,Frans Guelinckx,Shawn Wowk
+Johan Vandeweerd,PCP,Senior DevOps Engineering,Johan Vandeweerd,Shawn Wowk
+Ben Turner,PCP,Intermediate Developer Operations,Ben Turner,Shawn Wowk
+Shuai Hao,PCP,Senior Software Developer DevOps,Shuai Hao,Shawn Wowk
+Brandon McRae,PCP,Staff Software Developer,Brandon McRae,Lei Guo
+Robert Becker,POBS,Senior Software Developer DevOps,Robert Becker,Jay Mikhail
+Jay Mikhail,POBS,Lead Development DevOps,Jay Mikhail,Shawn Wowk
+Brian Groux,POBS,Staff Developer DevOps,Brian Groux,Lei Guo
+Roberto Sebastiano,POD Measure,Senior Software Developer DevOps,Roberto Sebastiano,Stefan Serban
+Vladimir Iacob,POD Measure,Software Developer DevOps,Vladimir Iacob,Stefan Serban
+Vlad-Cosmin Icatoiu,POD Measure,Software Developer DevOps,Vlad-Cosmin Icatoiu,Stefan Serban
+Lorenzo Junior Ferrara,POD Measure,Software Developer DevOps,Lorenzo Junior Ferrara,Stefan Serban
+Ivan Hoo,SRE,Software Developer DevOps,Ivan Hoo,Samantha Toner
+Eliot Aharon,SRE,Staff Developer DevOps,Eliot Aharon,Samantha Toner
+Ana Barajas Baez,SRE,Technical Product Manager,Ana Barajas Baez,Lei Guo
+Samantha Toner,SRE,Lead Development DevOps,Samantha Toner,Lei Guo
+Steven Shi,SRE,Senior Software Developer DevOps,Steven Shi,Samantha Toner
+Lei Guo,Overhead,Senior Director,Lei Guo,
