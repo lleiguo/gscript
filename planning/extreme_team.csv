@@ -1,0 +1,11 @@
+name,area,positionName,id,parentId
+PnP,PnP,,PnP,
+Platform,Platform,,Platform,PnP
+Enablement,Enablement,,Enablement,PnP
+Backend Platform,Backend Platform,,Backend Platform,Platform
+Front-end Platform,Front-end Platform,,Front-end Platform,Platform
+POD1,POD1,,POD1,Platform
+POD2,POD2,,POD2,Platform
+PODM,PODM,,PODM,Platform
+SRE,SRE,,SRE,Enablement
+Tooling,Tooling,,Tooling,Enablement
