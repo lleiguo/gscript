@@ -1,13 +1,13 @@
-name,area,positionName,id,parentId
-PnP,PnP,,PnP,
-Platform,Platform,,Platform,PnP
-Software,Software,,Software,Platform
-Front-end Platform,Front-end Platform,,Front-end Platform,Software
-Backend Platform,Backend Platform,,Backend Platform,Software
-Cloud,Cloud,,Cloud,Platform
-POD1,POD1,,POD1,Cloud
-POD2,POD2,,POD2,Cloud
-Enablement,Enablement,,Enablement,PnP
-SRE,SRE,,SRE,Enablement
-PODM,PODM,,PODM,Enablement
-Tooling,Tooling,,Tooling,Enablement
+name,imageUrl,area,positionName,id,parentId
+PnP,,PnP,,PnP,
+Platform,,Platform,,Platform,PnP
+Software,,Software,,Software,Platform
+Front-end,,Front-end,,Front-end,Software
+Backend,,Backend,,Backend,Software
+Cloud,https://w7.pngwing.com/pngs/108/217/png-transparent-microsoft-azure-cloud-computing-amazon-web-services-google-cloud-platform-cloud-computing-blue-cloud-heart.png,Cloud,,Cloud,Platform
+POD1,,POD1,,POD1,Cloud
+POD2,,POD2,,POD2,Cloud
+Enablement,,Enablement,,Enablement,PnP
+SRE,,SRE,,SRE,Enablement
+PODM,,PODM,,PODM,Enablement
+Tooling,,Tooling,,Tooling,Enablement
