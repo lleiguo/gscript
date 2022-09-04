@@ -1,11 +1,13 @@
 name,area,positionName,id,parentId
 PnP,PnP,,PnP,
 Platform,Platform,,Platform,PnP
+Software,Software,,Software,Platform
+Front-end Platform,Front-end Platform,,Front-end Platform,Software
+Backend Platform,Backend Platform,,Backend Platform,Software
+Cloud,Cloud,,Cloud,Platform
+POD1,POD1,,POD1,Cloud
+POD2,POD2,,POD2,Cloud
 Enablement,Enablement,,Enablement,PnP
-Front-end Platform,Front-end Platform,,Front-end Platform,Platform
-Backend Platform,Backend Platform,,Backend Platform,Platform
-POD1,POD1,,POD1,Platform
-POD2,POD2,,POD2,Platform
 SRE,SRE,,SRE,Enablement
 PODM,PODM,,PODM,Enablement
 Tooling,Tooling,,Tooling,Enablement
