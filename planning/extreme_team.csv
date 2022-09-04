@@ -1,7 +1,7 @@
 name,imageUrl,area,positionName,id,parentId
 PnP,,PnP,,PnP,
 Platform,,Platform,,Platform,PnP
-Software,,Software,,Software,Platform
+Software,https://ustartup.ca/wp-content/uploads/2020/09/web.png,Software,,Software,Platform
 Front-end,,Front-end,,Front-end,Software
 Backend,,Backend,,Backend,Software
 Cloud,https://w7.pngwing.com/pngs/108/217/png-transparent-microsoft-azure-cloud-computing-amazon-web-services-google-cloud-platform-cloud-computing-blue-cloud-heart.png,Cloud,,Cloud,Platform
