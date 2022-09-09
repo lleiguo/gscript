@@ -1,7 +1,7 @@
 name,area,profileUrl,positionName,id,parentId
 PnP,PnP,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,PnP,
-Platform,Platform,https://image.pngaaa.com/952/6019952-middle.png,,Platform,PnP
-Software,Software,https://image.pngaaa.com/952/6019952-middle.png,,Software,Platform
+Platform,Platform,https://callifony.com/wp-content/uploads/2021/07/saas-1.pngg,,Platform,PnP
+Software,Software,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Software,Platform
 Front-end,Front-end,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Steve Cullingworth(7),Front-end,Software
 Adriana Caciur,Front-end Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Software Developer,Adriana Caciur,Front-end
 Daniel Rusu,Front-end Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Staff Developer,Daniel Rusu,Front-end
