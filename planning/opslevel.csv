@@ -1,54 +1,15 @@
 name,area,profileUrl,positionName,id,parentId
-PnP,PnP,,,PnP,
-Platform,Platform,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Platform,PnP
-Software,Software,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,TPM (Ana),Software,Platform
-Front-end,Front-end,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Steve Cullingworth (7),Front-end,Software
-Adriana Caciur,Front-end Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Software Developer,Adriana Caciur,Front-end
-Daniel Rusu,Front-end Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Staff Developer,Daniel Rusu,Front-end
-Sabin Marcu,Front-end Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Software Developer,Sabin Marcu,Front-end
-Alvaro Sanchez,Legacy Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Software Developer,Alvaro Sanchez,Front-end
-Indu Kumar,Legacy Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Junior Software Developer,Indu Kumar,Front-end
-Mario Flores,Legacy Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Software Developer,Mario Flores,Front-end
-Riccardo Galli,Legacy Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Staff Developer,Riccardo Galli,Front-end
-Backend,Backend,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Amir Abdolrazaghi (9),Backend,Software
-Kaitlyn Melton,Legacy Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Software Developer,Kaitlyn Melton,Backend
-Michael Peng,Legacy Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Software Developer,Michael Peng,Backend
-Jason Moore,Backend Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Staff Developer,Jason Moore,Backend
-Jef Rubert,Backend Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Software Developer,Jef Rubert,Backend
-Jonatas Barbosa,Backend Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Software Developer,Jonatas Barbosa,Backend
-Nur Ozgun,Backend Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Software Developer,Nur Ozgun,Backend
-Armin Sameti,Backend,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Software Developer DevOps,Armin Sameti,Backend
-Michael Wagler,Backend Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Software Developer,Michael Wagler,Backend
-Ken Ho,Backend Platform,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Software Developer,Ken Ho,Backend
-Cloud,Cloud,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,TPM (Jessie),Cloud,Platform
-Orange,Orange,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Shawn Wowk (6),Orange,Cloud
-Shuai Hao,PCP,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Software Developer DevOps,Shuai Hao,Orange
-Frans Guelinckx,PCP,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Software Developer DevOps,Frans Guelinckx,Orange
-Ben Bertrands,PCP,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Software Developer DevOps,Ben Bertrands,Orange
-Roberto Sebastiano,PODM,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Software Developer DevOps,Roberto Sebastiano,Orange
-Lorenzo Junior Ferrara,PODM,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Software Developer DevOps,Lorenzo Junior Ferrara,Orange
-Simone Payne,BTD,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Software Developer DevOps,Simone Payne,Orange
-Bluewater Mango, Bluewater Mango,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Stefan Serban (6), Bluewater Mango,Cloud
-Jay Mikhail,POBS,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Lead Development DevOps,Jay Mikhail, Bluewater Mango
-Johan Vandeweerd,PCP,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior DevOps Engineering,Johan Vandeweerd, Bluewater Mango
-Vlad-Cosmin Icatoiu,PODM,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Software Developer DevOps,Vlad-Cosmin Icatoiu, Bluewater Mango
-Vladimir Iacob,PODM,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Software Developer DevOps,Vladimir Iacob, Bluewater Mango
-Ben Turner,PCP,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Software Developer DevOps,Ben Turner, Bluewater Mango
-Mike Monaghan,BTD,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Software Developer DevOps,Mike Monaghan, Bluewater Mango
-Enablement,Enablement,https://thumbs.dreamstime.com/b/teamwork-management-icon-business-team-partnership-black-isolated-white-background-staff-organization-head-178123688.jpg,,Enablement,PnP
-SRE,SRE,https://thumbs.dreamstime.com/b/teamwork-management-icon-business-team-partnership-black-isolated-white-background-staff-organization-head-178123688.jpg,Matt Moor (4),SRE,Enablement
-Samantha Toner,SRE,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Lead Development DevOps,Samantha Toner,SRE
-Eliot Aharon,SRE,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Staff Developer DevOps,Eliot Aharon,SRE
-Steven Shi,SRE,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Software Developer DevOps,Steven Shi,SRE
-Robert Becker,POBS,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Software Developer DevOps,Robert Becker,SRE
-Overhead,Overhead,https://www.reportcreators.com/wp-content/uploads/2017/05/003-workers-team.png,TPM & Manager & Staff,Overhead,PnP
-Amir Abdolrazaghi,Overhead,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Manager,Amir Abdolrazaghi,Overhead
-Ana Barajas Baez,Overhead,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Technical Product Manager,Ana Barajas Baez,Overhead
-Jessie Ye,Overhead,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Technical Product Manager,Jessie Ye,Overhead
-Matt Moor,Overhead,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Manager,Matt Moor,Overhead
-Shawn Wowk,Overhead,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Manager,Shawn Wowk,Overhead
-Shelby Moore,Overhead,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Senior Staff Developer,Shelby Moore,Overhead
-Stefan Serban,Overhead,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Manager,Stefan Serban,Overhead
-Steve Cullingworth,Overhead,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Manager,Steve Cullingworth,Overhead
-Brandon McRae,PCP,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Staff Software Developer,Brandon McRae,Overhead
-Brian Groux,POBS,https://flyclipart.com/thumb2/icon-human-icon-with-png-and-vector-format-for-free-unlimited-874003.png,Staff Developer DevOps,Brian Groux,Overhead
+Promote&Selling,Promote&Selling,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Promote&Selling,
+Promote,Promote,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Promote,Promote&Selling
+Social Selling,Social Selling,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Social Selling,Promote&Selling
+Measure,Measure,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Measure,
+Analytics,Analytics,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Measure,
+Impact,Impact,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Measure,
+Yanik,Yanik,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Yanik,
+Publishing & Customer Activation,Publishing & Customer Activation,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Publishing & Customer Activation,Yanik
+Mobile,Mobile,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Mobile,Yanik
+Product Growth,Product Growth,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Product Growth,Yanik
+PIF,PIF,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,PIF,
+Care & Engage,Care & Engage,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,TPM (Ana),Care & Engage,
+Social Care,Social Care,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Steve Cullingworth (7),Social Care,Care & Engage
+Engage,Engage,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Steve Cullingworth (7),Engage,Care & Engage
