@@ -1,16 +1,19 @@
 name,area,profileUrl,positionName,id,parentId
 Sotware Dev,Sotware Dev,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Sotware Dev,
-Promote&Selling,Promote&Selling,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Promote&Selling,Sotware Dev
-Measure,Measure,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Measure,Sotware Dev
-Yanik,Yanik,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Yanik,Sotware Dev
-PIF,PIF,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,PIF,Sotware Dev
-Care & Engage,Care & Engage,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Pieter,Care & Engage,Sotware Dev
-Social Care,Social Care,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Pieter,Social Care,Care & Engage
-Engage,Engage,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Tyler Brown,Engage,Care & Engage
-Promote,Promote,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Promote,Promote&Selling
-Social Selling,Social Selling,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Social Selling,Promote&Selling
+Monetization & Social Ads & Selling,Monetization & Social Ads & Selling,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Alessandro Schito,Monetization & Social Ads & Selling,Sotware Dev
+Monetization,Monetization,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Monetization,Monetization & Social Ads & Selling
+Social Ads & Selling,Social Ads & Selling,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Social Ads & Selling,Monetization & Social Ads & Selling
+Measure,Measure,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Claudiu Coman,Measure,Sotware Dev
 Analytics,Analytics,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Analytics,Measure
 Impact,Impact,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Impact,Measure
-Publishing & Customer Activation,Publishing & Customer Activation,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Publishing & Customer Activation,Yanik
-Mobile,Mobile,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Mobile,Yanik
-Product Growth,Product Growth,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Product Growth,Yanik
+P&C,P&C,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Yanik Berube,P&C,Sotware Dev
+Publishing & Customer Activation,Publishing & Customer Activation,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Publishing & Customer Activation,P&C
+Mobile,Mobile,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,David Bonnefoy,Mobile,P&C
+PIF,PIF,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Ana Ramdas,PIF,Sotware Dev
+Ecosystem,Ecosystem,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Alex McRoberts,Ecosystem,Sotware Dev
+Care & Engage,Care & Engage,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Pieter Lievens,Care & Engage,Sotware Dev
+Social Care,Social Care,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Pieter Lievens,Social Care,Care & Engage
+Core Engagement,Core Engagement,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Tyler Brown,Core Engagement,Care & Engage
+Heyday,Heyday,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Stephane St-Arnauld,Heyday,Sotware Dev
+Birdie,Birdie,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Stephane St-Arnauld,Birdie,Heyday
+Conversation AI,Conversation AI,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Stephane St-Arnauld,Conversation AI,Heyday
