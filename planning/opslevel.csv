@@ -1,8 +1,8 @@
 name,area,profileUrl,positionName,id,parentId
 Sotware Dev,Sotware Dev,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Sotware Dev,
-Monetization & Social Selling,Monetization & Social Ads & Selling,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Alessandro Schito,Monetization & Social Selling,Sotware Dev
-Monetization,Monetization,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Monetization,Monetization & Social Selling
-Social Selling,Social Selling,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Social Ads & Selling,Monetization & Social Selling
+Amplify & Promote,Amplify & Promote,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Alessandro Schito,Amplify & Promote,Sotware Dev
+Amplify,Amplify,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Amplify,Amplify & Promote
+Promote,Promote,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Promote,Amplify & Promote
 Measure,Measure,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Claudiu Coman,Measure,Sotware Dev
 Analytics,Analytics,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Analytics,Measure
 Impact,Impact,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,,Impact,Measure
@@ -17,4 +17,5 @@ Social Care,Social Care,https://callifony.com/wp-content/uploads/2021/07/saas-1.
 Engage,Engage,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Tyler Brown,Engage,Care & Engage
 Heyday,Heyday,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Stephane St-Arnauld,Heyday,Sotware Dev
 Birdie,Birdie,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Stephane St-Arnauld,Birdie,Heyday
-Conversation AI,Conversation AI,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Stephane St-Arnauld,Conversation AI,Heyday
+Heyday Analytics,Heyday Analytics,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Stephane St-Arnauld,Heyday Analytics,Heyday
+Heyday Platform,Heyday Platform,https://callifony.com/wp-content/uploads/2021/07/saas-1.png,Stephane St-Arnauld,Heyday Platform,Heyday
