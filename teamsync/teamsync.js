@@ -9,7 +9,7 @@ var Teams;
 })(Teams || (Teams = {}));
 var anniversaries = [];
 var newHires = [];
-var firstSyncDate = new Date("2023-02-02T08:00:00.000-08:00");
+var firstSyncDate = new Date("2024-01-11T08:00:00.000-08:00");
 var daysSinceFirstSync = Math.ceil(new Date().getTime() - firstSyncDate.getTime()) / (1000 * 60 * 60 * 24);
 var nextSyncDate = new Date(firstSyncDate.getTime() + (14 * (Math.floor(daysSinceFirstSync / 14) + 1) * (1000 * 60 * 60 * 24)));
 var nextFacilitator = Teams[Teams.SRE];
@@ -24,7 +24,7 @@ function onOpen() {
 function getNextSyncDateAndFacilitator() {
     nextSyncDate.setHours(11, 0, 0);
     Logger.log(Utilities.formatDate(nextSyncDate, "GMT-5", "MMMM dd, yyyy'T'HH:mm:ss zzzz"));
-    nextFacilitator = Teams[(Teams.SRE + Math.floor(daysSinceFirstSync / 14) + 1) % 5];
+    nextFacilitator = Teams[(Math.floor(daysSinceFirstSync / 14) + 1) % 5];
     Logger.log(nextFacilitator);
 }
 function getAnniversariesAndNewHires() {
@@ -50,7 +50,7 @@ function syncAgenda() {
 }
 function sendAgendaToGoogleDoc() {
     syncAgenda();
-    var doc = DocumentApp.openById("1TzMZxbn48IQL_F_wOoQjpZQYcjVxpH4oQC6TWJgWVr4");
+    var doc = DocumentApp.openById("15WsCfgVlFL93pRhF1ehhc37PxX2SbxiKPm8tYHJfowAH4oQC6TWJgWVr4");
     var body = doc.getBody();
     var hr = body.findElement(DocumentApp.ElementType.TABLE);
     var date = Utilities.formatDate(nextSyncDate, "GMT-5", "MMMM dd, yyyy'T'HH:mm:ss zzzz");
@@ -75,12 +75,15 @@ function sendAgendaToGoogleDoc() {
         newHire.setNestingLevel(0);
         nextIndex = body.getChildIndex(newHire) + newHires.length + 1;
     }
-    var demos = body.insertListItem(nextIndex, "Demos");
-    demos.setNestingLevel(0);
-    nextIndex = body.getChildIndex(demos) + 1;
+    var tagdpg = body.insertListItem(nextIndex, "TAG/DPG Updates");
+    tagdpg.setNestingLevel(0);
+    nextIndex = body.getChildIndex(tagdpg) + 1;
     var announcement = body.insertListItem(nextIndex, "Announcement");
     announcement.setNestingLevel(0);
     nextIndex = body.getChildIndex(announcement) + 1;
+    var shoutout = body.insertListItem(nextIndex, "Shout-out");
+    shoutout.setNestingLevel(0);
+    nextIndex = body.getChildIndex(shoutout) + 1;
     if (anniversaries.length > 0) {
         var anniversary = body.insertListItem(nextIndex, "Anniversaries");
         anniversaries.forEach(function (value, index) {
