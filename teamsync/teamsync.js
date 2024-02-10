@@ -9,7 +9,7 @@ var Teams;
 })(Teams || (Teams = {}));
 var anniversaries = [];
 var newHires = [];
-var firstSyncDate = new Date("2024-01-11T08:00:00.000-08:00");
+var firstSyncDate = new Date("2024-01-11T08:15:00.000-08:00");
 var daysSinceFirstSync = Math.ceil(new Date().getTime() - firstSyncDate.getTime()) / (1000 * 60 * 60 * 24);
 var nextSyncDate = new Date(firstSyncDate.getTime() + (14 * (Math.floor(daysSinceFirstSync / 14) + 1) * (1000 * 60 * 60 * 24)));
 var nextFacilitator = Teams[Teams.SRE];
