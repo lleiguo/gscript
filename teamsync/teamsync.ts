@@ -1,5 +1,3 @@
-// Compiled using ts2gas 3.6.3 (TypeScript 3.9.7)
-
 const SHEET_ID = "1HhHaRDxhngE5RrChY4vR03Zrea93oEDTXa3uixSfyp4";
 const WORKER_COL_INDEX = 5;
 const HIRE_DATE_COL_INDEX = 8;
@@ -13,8 +11,6 @@ const Teams = {
   "SRE": 4
 };
 
-const anniversaries = [];
-const newHires = [];
 const firstSyncDate = new Date("2024-01-11T08:15:00.000-08:00");
 
 const daysSinceFirstSync = Math.ceil(new Date().getTime() - firstSyncDate.getTime()) / (1000 * 60 * 60 * 24);
@@ -103,8 +99,10 @@ class DocumentWriter {
     this.insertRecordingReminder();
     this.insertAgendaHeader(nextFacilitator);
     this.insertAgendaItems(newHires, "New Hire Intro");
+    this.insertAgendaItems([], "TAG/DPG Updates");
+    this.insertAgendaItems([], "Announcements");
+    this.insertAgendaItems([], "Shoutouts"); 
     this.insertAgendaItems(anniversaries, "Anniversaries");
-    // Add additional agenda item sections as needed
   }
 
   private insertDate(date: Date): void {
@@ -140,6 +138,7 @@ class DocumentWriter {
   }
 
   private findTable(body: Body): GoogleAppsScript.Element {
-    body.findElement(DocumentApp.ElementType.TABLE)
+    var hr = body.findElement(DocumentApp.ElementType.TABLE)
+    return hr ? hr.getElement() : null;
   }
 }
