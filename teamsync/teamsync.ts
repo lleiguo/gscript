@@ -33,8 +33,6 @@ function sendAgendaToGoogleDoc() {
 }
 
 class SyncAgenda {
-  private firstSyncDate: Date = new Date("2024-01-11T08:15:00.000-08:00");
-
   constructor(private sheet: GoogleAppsScript.Spreadsheet = SpreadsheetApp.openById(SHEET_ID)) { }
 
   sync(): void {
@@ -61,7 +59,7 @@ class SyncAgenda {
   private calculateNextSyncDateAndFacilitator(): { nextSyncDate: Date; nextFacilitator: string } {
     const daysSinceFirstSync = Math.ceil((new Date().getTime() - this.firstSyncDate.getTime()) / (1000 * 60 * 60 * 24));
     const nextSyncDate = new Date(this.firstSyncDate.getTime() + (14 * (Math.floor(daysSinceFirstSync / 14) + 1) * (1000 * 60 * 60 * 24)));
-    nextSyncDate.setHours(11, 0, 0);
+    nextSyncDate.setHours(11, 15, 0);
     const nextFacilitator = Teams[(Math.floor(daysSinceFirstSync / 14) + 1) % 5];
     return { nextSyncDate, nextFacilitator };
   }
