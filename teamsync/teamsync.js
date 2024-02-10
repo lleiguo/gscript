@@ -50,7 +50,7 @@ function syncAgenda() {
 }
 function sendAgendaToGoogleDoc() {
     syncAgenda();
-    var doc = DocumentApp.openById("15WsCfgVlFL93pRhF1ehhc37PxX2SbxiKPm8tYHJfowAH4oQC6TWJgWVr4");
+    var doc = DocumentApp.openById("15WsCfgVlFL93pRhF1ehhc37PxX2SbxiKPm8tYHJfowA");
     var body = doc.getBody();
     var hr = body.findElement(DocumentApp.ElementType.TABLE);
     var date = Utilities.formatDate(nextSyncDate, "GMT-5", "MMMM dd, yyyy'T'HH:mm:ss zzzz");
