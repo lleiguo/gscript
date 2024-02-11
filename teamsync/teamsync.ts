@@ -105,7 +105,7 @@ class DocumentWriter {
     if (newHires.length > 0) {
       this.insertAgendaItems(newHires, "New Hire Intro");
     }
-}
+  }
 
   private insertDate(date: Date): void {
     const formattedDate = Utilities.formatDate(date, "GMT-5", "MMMM dd, yyyy'T'HH:mm:ss zzzz");
