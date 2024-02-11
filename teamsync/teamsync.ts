@@ -3,13 +3,14 @@ const WORKER_COL_INDEX = 5;
 const HIRE_DATE_COL_INDEX = 8;
 const DOCUMENT_ID = "15WsCfgVlFL93pRhF1ehhc37PxX2SbxiKPm8tYHJfowA";
 
-enum Teams {
-  BackendPlatform = "Backend Platform",
-  BluewaterMango = "Bluewater Mango",
-  FrontendPlatform = "Frontend Platform",
-  Orange = "Orange",
-  SRE = "SRE",
-}
+var Teams;
+(function (Teams) {
+    Teams["BackendPlatform"] = "Backend Platform";
+    Teams["BluewaterMango"] = "Bluewater Mango";
+    Teams["FrontendPlatform"] = "Frontend Platform";
+    Teams["Orange"] = "Orange";
+    Teams["SRE"] = "SRE";
+})(Teams || (Teams = {}));
 
 const firstSyncDate = new Date("2024-01-11T08:15:00.000-08:00");
 
@@ -60,8 +61,7 @@ class SyncAgenda {
     const daysSinceFirstSync = Math.ceil((new Date().getTime() - firstSyncDate.getTime()) / (1000 * 60 * 60 * 24));
     const nextSyncDate = new Date(firstSyncDate.getTime() + (14 * (Math.floor(daysSinceFirstSync / 14) + 1) * (1000 * 60 * 60 * 24)));
     nextSyncDate.setHours(11, 15, 0);
-    type TeamName = keyof typeof Teams
-    const nextFacilitator: TeamName = Teams[(Math.floor(daysSinceFirstSync / 14) + 1) % 5];
+    const nextFacilitator = Teams[(Math.floor(daysSinceFirstSync / 14) + 1) % 5];
     return { nextSyncDate, nextFacilitator };
   }
 
