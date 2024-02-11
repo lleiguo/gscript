@@ -60,7 +60,8 @@ class SyncAgenda {
     const daysSinceFirstSync = Math.ceil((new Date().getTime() - firstSyncDate.getTime()) / (1000 * 60 * 60 * 24));
     const nextSyncDate = new Date(firstSyncDate.getTime() + (14 * (Math.floor(daysSinceFirstSync / 14) + 1) * (1000 * 60 * 60 * 24)));
     nextSyncDate.setHours(11, 15, 0);
-    const nextFacilitator = Teams[(Math.floor(daysSinceFirstSync / 14) + 1) % 5];
+    type TeamName = keyof typeof Teams
+    const nextFacilitator: TeamName = Teams[(Math.floor(daysSinceFirstSync / 14) + 1) % 5];
     return { nextSyncDate, nextFacilitator };
   }
 
