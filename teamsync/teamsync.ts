@@ -57,8 +57,8 @@ class SyncAgenda {
   }
 
   private calculateNextSyncDateAndFacilitator(): { nextSyncDate: Date; nextFacilitator: string } {
-    const daysSinceFirstSync = Math.ceil((new Date().getTime() - this.firstSyncDate.getTime()) / (1000 * 60 * 60 * 24));
-    const nextSyncDate = new Date(this.firstSyncDate.getTime() + (14 * (Math.floor(daysSinceFirstSync / 14) + 1) * (1000 * 60 * 60 * 24)));
+    const daysSinceFirstSync = Math.ceil((new Date().getTime() - firstSyncDate.getTime()) / (1000 * 60 * 60 * 24));
+    const nextSyncDate = new Date(firstSyncDate.getTime() + (14 * (Math.floor(daysSinceFirstSync / 14) + 1) * (1000 * 60 * 60 * 24)));
     nextSyncDate.setHours(11, 15, 0);
     const nextFacilitator = Teams[(Math.floor(daysSinceFirstSync / 14) + 1) % 5];
     return { nextSyncDate, nextFacilitator };
@@ -96,12 +96,15 @@ class DocumentWriter {
     this.insertDate(nextSyncDate);
     this.insertRecordingReminder();
     this.insertAgendaHeader(nextFacilitator);
-    this.insertAgendaItems(newHires, "New Hire Intro");
-    this.insertAgendaItems([], "TAG/DPG Updates");
-    this.insertAgendaItems([], "Announcements");
-    this.insertAgendaItems([], "Shoutouts"); 
-    this.insertAgendaItems(anniversaries, "Anniversaries");
-  }
+    if (newHires.length > 0) {
+      this.insertAgendaItems(newHires, "New Hire Intro");
+    }
+    this.insertAgendaItems(["TAG/DPG Updates", "General Updates"], "Updates & Announcements");
+    this.insertAgendaItems([], "Shoutouts");
+    if (anniversaries.length > 0) {
+      this.insertAgendaItems(anniversaries, "Anniversaries");
+    }
+}
 
   private insertDate(date: Date): void {
     const formattedDate = Utilities.formatDate(date, "GMT-5", "MMMM dd, yyyy'T'HH:mm:ss zzzz");
@@ -125,14 +128,12 @@ class DocumentWriter {
   }
 
   private insertAgendaItems(items: string[], title: string): void {
-    if (items.length > 0) {
-      const body = this.document.getBody();
-      const sectionElement = body.insertListItem(body.getChildIndex(this.findTable(body)) + 4, title);
-      sectionElement.setNestingLevel(0);
-      items.forEach((item) => {
-        body.insertListItem(body.getChildIndex(sectionElement) + 1, item).setNestingLevel(1);
-      });
-    }
+    const body = this.document.getBody();
+    const sectionElement = body.insertListItem(body.getChildIndex(this.findTable(body)) + 4, title);
+    sectionElement.setNestingLevel(0);
+    items.forEach((item) => {
+      body.insertListItem(body.getChildIndex(sectionElement) + 1, item).setNestingLevel(1);
+    });
   }
 
   private findTable(body: Body): GoogleAppsScript.Element {
