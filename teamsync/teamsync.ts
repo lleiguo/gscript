@@ -99,11 +99,11 @@ class DocumentWriter {
     if (newHires.length > 0) {
       this.insertAgendaItems(newHires, "New Hire Intro");
     }
-    this.insertAgendaItems(["TAG/DPG Updates", "General Updates"], "Updates & Announcements");
     this.insertAgendaItems([], "Shoutouts");
     if (anniversaries.length > 0) {
       this.insertAgendaItems(anniversaries, "Anniversaries");
     }
+    this.insertAgendaItems(["General Updates", "TAG/DPG Updates"], "Updates & Announcements");
 }
 
   private insertDate(date: Date): void {
