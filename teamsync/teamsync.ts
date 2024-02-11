@@ -5,11 +5,11 @@ const DOCUMENT_ID = "15WsCfgVlFL93pRhF1ehhc37PxX2SbxiKPm8tYHJfowA";
 
 var Teams;
 (function (Teams) {
-    Teams["BackendPlatform"] = "Backend Platform";
-    Teams["BluewaterMango"] = "Bluewater Mango";
-    Teams["FrontendPlatform"] = "Frontend Platform";
-    Teams["Orange"] = "Orange";
-    Teams["SRE"] = "SRE";
+    Teams[Teams["BackendPlatform"] = 0]= "Backend Platform";
+    Teams[Teams["BluewaterMango"] = 1] = "Bluewater Mango";
+    Teams[Teams["FrontendPlatform"] = 2] = "Frontend Platform";
+    Teams[Teams["Orange"] = 3] = "Orange";
+    Teams[Teams["SRE"] = 4] = "SRE";
 })(Teams || (Teams = {}));
 
 const firstSyncDate = new Date("2024-01-11T08:15:00.000-08:00");
