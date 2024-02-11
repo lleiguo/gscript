@@ -3,13 +3,13 @@ const WORKER_COL_INDEX = 5;
 const HIRE_DATE_COL_INDEX = 8;
 const DOCUMENT_ID = "15WsCfgVlFL93pRhF1ehhc37PxX2SbxiKPm8tYHJfowA";
 
-const Teams = {
-  "Backend Platform": 0,
-  "Bluewater Mango": 1,
-  "Frontend Platform": 2,
-  "Orange": 3,
-  "SRE": 4
-};
+enum Teams {
+  BackendPlatform = "Backend Platform",
+  BluewaterMango = "Bluewater Mango",
+  FrontendPlatform = "Frontend Platform",
+  Orange = "Orange",
+  SRE = "SRE",
+}
 
 const firstSyncDate = new Date("2024-01-11T08:15:00.000-08:00");
 
@@ -96,14 +96,14 @@ class DocumentWriter {
     this.insertDate(nextSyncDate);
     this.insertRecordingReminder();
     this.insertAgendaHeader(nextFacilitator);
-    if (newHires.length > 0) {
-      this.insertAgendaItems(newHires, "New Hire Intro");
-    }
-    this.insertAgendaItems([], "Shoutouts");
     if (anniversaries.length > 0) {
       this.insertAgendaItems(anniversaries, "Anniversaries");
     }
+    this.insertAgendaItems([], "Shoutouts");
     this.insertAgendaItems(["General Updates", "TAG/DPG Updates"], "Updates & Announcements");
+    if (newHires.length > 0) {
+      this.insertAgendaItems(newHires, "New Hire Intro");
+    }
 }
 
   private insertDate(date: Date): void {
