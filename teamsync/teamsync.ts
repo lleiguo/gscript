@@ -12,7 +12,7 @@ var Teams;
     Teams[Teams["SRE"] = 4] = "SRE";
 })(Teams || (Teams = {}));
 
-const firstSyncDate = new Date("2024-01-11T08:15:00.000-08:00");
+const firstSyncDate = new Date("2024-01-10T08:30:00.000-08:00");
 
 const daysSinceFirstSync = Math.ceil(new Date().getTime() - firstSyncDate.getTime()) / (1000 * 60 * 60 * 24);
 const nextSyncDate = new Date(firstSyncDate.getTime() + (14 * (Math.floor(daysSinceFirstSync / 14) + 1) * (1000 * 60 * 60 * 24)));
